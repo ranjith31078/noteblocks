@@ -1,0 +1,35 @@
+rules:
+  - id: detect-js-eval
+    patterns:
+      - pattern-either:
+          - pattern: eval($EXPR)
+          - pattern: new Function(...)
+    message: Avoid dynamic code execution primitives in production code.
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  - id: detect-child-process-shell
+    patterns:
+      - pattern-either:
+          - pattern: exec($CMD)
+          - pattern: execSync($CMD)
+          - pattern: spawn($CMD, ..., { ..., shell: true, ... })
+          - pattern: spawnSync($CMD, ..., { ..., shell: true, ... })
+    message: Shell execution is high risk and should be reviewed.
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  - id: detect-insecure-random
+    patterns:
+      - pattern-either:
+          - pattern: Math.random()
+    message: Math.random() is not cryptographically secure.
+    severity: ERROR
+    languages: [javascript, typescript]
+
+  - id: detect-hardcoded-secret-keyword
+    patterns:
+      - pattern-regex: (?i)(api[_-]?key|secret|token|password)\s*[:=]\s*["'][^"'\n]{8,}["']
+    message: Possible hardcoded secret.
+    severity: ERROR
+    languages: [javascript, typescript]

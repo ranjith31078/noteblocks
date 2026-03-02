@@ -1,0 +1,104 @@
+.note-editor .ql-toolbar.ql-snow {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: visible;
+  white-space: normal;
+  border: none;
+  position: relative;
+  z-index: 10;
+  font-size: 14px;
+}
+
+.note-editor .ql-toolbar.ql-snow .ql-formats {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin-right: 8px;
+}
+
+.note-editor .ql-toolbar.ql-snow .ql-picker-options {
+  position: absolute;
+  z-index: 1000;
+}
+
+.note-editor .ql-container.ql-snow {
+  position: relative;
+  z-index: 1;
+  border: none;
+}
+
+.note-editor .ql-toolbar.ql-snow .ql-picker,
+.note-editor .ql-toolbar.ql-snow .ql-picker-label,
+.note-editor .ql-toolbar.ql-snow .ql-picker-item {
+  font-size: 14px;
+}
+
+.note-content.ql-editor {
+  min-height: 0;
+  padding: 0;
+}
+
+.note-editor .ql-editor ol,
+.note-editor .ql-editor ul,
+.note-content.ql-editor ol,
+.note-content.ql-editor ul {
+  padding-left: 1.5em;
+}
+
+.note-editor .ql-editor li[data-list="ordered"],
+.note-content.ql-editor li[data-list="ordered"] {
+  list-style-type: decimal;
+  display: list-item;
+  padding-left: 0;
+}
+
+.note-editor .ql-editor li[data-list="bullet"],
+.note-content.ql-editor li[data-list="bullet"] {
+  list-style-type: disc;
+  display: list-item;
+  padding-left: 0;
+}
+
+.note-editor .ql-editor li > .ql-ui,
+.note-content.ql-editor li > .ql-ui {
+  display: none;
+}
+
+.note-content.ql-editor img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+.tags-sidebar {
+  width: 220px;
+  position: absolute;
+  left: -240px;
+  top: 0;
+}
+
+.notes-layout {
+  width: 940px;
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+@media (max-width: 1300px) {
+  .tags-sidebar {
+    position: static;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .notes-layout {
+    width: 100%;
+    max-width: 100%;
+  }
+}

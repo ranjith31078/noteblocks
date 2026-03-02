@@ -1,0 +1,8 @@
+# Next.js Notes App
+node_modules
+.next
+out
+notes/*.db
+notes/*.db-shm
+notes/*.db-wal
+deploy/
