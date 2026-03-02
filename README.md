@@ -1,6 +1,9 @@
-# noteblocks
+# Noteblocks
 
 Noteblocks is a self-hosted notes app built with Next.js.
+
+<img src="https://favzen.com/noteblocks-screenshot-1.png"/>
+<img src="https://favzen.com/noteblocks-screenshot-2.png"/>
 
 ## Data Storage (SQLite)
 
